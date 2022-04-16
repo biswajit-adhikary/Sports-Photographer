@@ -1,23 +1,52 @@
 [
     {
         "id": 1,
-        "name": "Sporting Events Photography",
-        "price": "300",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
-        "img": "https://i.ibb.co/dGDkr4v/1.jpg"
+        "name": "Image One",
+        "img": "https://biswajitadhikary.com/sports-photographer/gallery-one.jpg"
     },
     {
         "id": 2,
-        "name": "Team Picture Day Photography",
-        "price": "100",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
-        "img": "https://i.ibb.co/tY8dmnP/2.jpg"
+        "name": "Image Two",
+        "img": "https://biswajitadhikary.com/sports-photographer/gallery-two.jpg"
     },
     {
         "id": 3,
-        "name": "Live Match Photography",
-        "price": "150",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
-        "img": "https://i.ibb.co/Yh04YVw/3.jpg"
+        "name": "Image Three",
+        "img": "https://biswajitadhikary.com/sports-photographer/gallery-three.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Image Four",
+        "img": "https://biswajitadhikary.com/sports-photographer/gallery-four.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Image Five",
+        "img": "https://biswajitadhikary.com/sports-photographer/gallery-five.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Image Six",
+        "img": "https://biswajitadhikary.com/sports-photographer/gallery-six.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Image Seven",
+        "img": "https://biswajitadhikary.com/sports-photographer/gallery-seven.jpg"
+    },
+    {
+        "id": 8,
+        "name": "Image Eight",
+        "img": "https://biswajitadhikary.com/sports-photographer/gallery-eight.jpg"
+    },
+    {
+        "id": 9,
+        "name": "Image Nine",
+        "img": "https://biswajitadhikary.com/sports-photographer/gallery-nine.jpg"
+    },
+    {
+        "id": 10,
+        "name": "Image Ten",
+        "img": "https://biswajitadhikary.com/sports-photographer/gallery-ten.jpg"
     }
 ]

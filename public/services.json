@@ -1,23 +1,23 @@
 [
     {
         "id": 1,
-        "name": "ENGINE DIAGNOSTIC",
+        "name": "Sporting Events Photography",
         "price": "300",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
-        "img": "https://i.ibb.co/dGDkr4v/1.jpg"
+        "description": "I'm the leading sporting event photographer in Bangladesh. I offer quality images and products, on-site printing and great pricing!",
+        "img": "https://biswajitadhikary.com/sports-photographer/service-one.jpg"
     },
     {
         "id": 2,
-        "name": "WHEEL ALIGNMENT",
+        "name": "Live Match Photography",
         "price": "100",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
-        "img": "https://i.ibb.co/tY8dmnP/2.jpg"
+        "description": "My live match photography is best in the world. The quality of the photos are just amazing and beautiful and ready to use for your next platform.",
+        "img": "https://biswajitadhikary.com/sports-photographer/service-two.jpg"
     },
     {
         "id": 3,
-        "name": "OIL CHANGING",
+        "name": "Team Picture Day Photography",
         "price": "150",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
-        "img": "https://i.ibb.co/Yh04YVw/3.jpg"
+        "description": "I offers top quality posed team & individual photography services for any size team and league. You will get best team photos from me.",
+        "img": "https://biswajitadhikary.com/sports-photographer/service-three.jpg"
     }
 ]
