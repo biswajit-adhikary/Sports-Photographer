@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Header = () => {
     return (
         <header className='header'>
-            <Navbar bg="primary" variant="dark" expand="lg">
+            <Navbar fixed="top" bg="dark" variant="dark" expand="lg" className='py-3'>
                 <Container>
                     <Navbar.Brand as={Link} to="/">
                         Biswajit Adhikary
