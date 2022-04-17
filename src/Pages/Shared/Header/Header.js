@@ -1,4 +1,5 @@
 import React from 'react';
+import logo from '../../../images/logo.png';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './Header.css';
@@ -9,7 +10,7 @@ const Header = () => {
             <Navbar fixed="top" bg="dark" variant="dark" expand="lg" className='py-3'>
                 <Container>
                     <Navbar.Brand as={Link} to="/">
-                        Biswajit Adhikary
+                        <img src={logo} alt="" />
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">

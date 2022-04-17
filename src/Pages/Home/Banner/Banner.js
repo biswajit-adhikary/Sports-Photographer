@@ -16,7 +16,7 @@ const Banner = () => {
                     alt="First slide"
                 />
                 <Carousel.Caption>
-                    <h3>Biswajit Adhikary</h3>
+                    <h3>Spotographer</h3>
                     <h2>Sports Photographer</h2>
                     <p>I Capture Sports Moments and Actions.</p>
                     <Link to="/about">More About Me</Link>
@@ -30,7 +30,7 @@ const Banner = () => {
                 />
 
                 <Carousel.Caption>
-                    <h3>Biswajit Adhikary</h3>
+                    <h3>Spotographer</h3>
                     <h2>Sports Photographer</h2>
                     <p>I Capture Sports Moments and Actions.</p>
                     <Link to="/about">More About Me</Link>
@@ -44,7 +44,7 @@ const Banner = () => {
                 />
 
                 <Carousel.Caption>
-                    <h3>Biswajit Adhikary</h3>
+                    <h3>Spotographer</h3>
                     <h2>Sports Photographer</h2>
                     <p>I Capture Sports Moments and Actions.</p>
                     <Link to="/about">More About Me</Link>
