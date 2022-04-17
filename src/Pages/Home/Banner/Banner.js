@@ -18,7 +18,7 @@ const Banner = () => {
                 <Carousel.Caption>
                     <h3>Biswajit Adhikary</h3>
                     <h2>Sports Photographer</h2>
-                    <p>I capture Sports Moments and Actions or the Worlds.</p>
+                    <p>I Capture Sports Moments and Actions.</p>
                     <Link to="/about">More About Me</Link>
                 </Carousel.Caption>
             </Carousel.Item>
@@ -32,7 +32,7 @@ const Banner = () => {
                 <Carousel.Caption>
                     <h3>Biswajit Adhikary</h3>
                     <h2>Sports Photographer</h2>
-                    <p>I capture Sports Moments and Actions or the Worlds.</p>
+                    <p>I Capture Sports Moments and Actions.</p>
                     <Link to="/about">More About Me</Link>
                 </Carousel.Caption>
             </Carousel.Item>
@@ -46,7 +46,7 @@ const Banner = () => {
                 <Carousel.Caption>
                     <h3>Biswajit Adhikary</h3>
                     <h2>Sports Photographer</h2>
-                    <p>I capture Sports Moments and Actions or the Worlds.</p>
+                    <p>I Capture Sports Moments and Actions.</p>
                     <Link to="/about">More About Me</Link>
                 </Carousel.Caption>
             </Carousel.Item>

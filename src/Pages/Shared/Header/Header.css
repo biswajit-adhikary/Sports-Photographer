@@ -1,0 +1,14 @@
+a.navbar-brand {
+    text-transform: capitalize;
+    font-size: 20px;
+}
+
+.navbar-nav a.nav-link {
+    padding: 0 20px !important;
+}
+
+@media (max-width: 991px) {
+    .navbar-nav a.nav-link {
+        padding: 5px 0px !important;
+    }
+}

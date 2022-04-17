@@ -1,3 +1,37 @@
 .slider .carousel-caption {
     bottom: 75px;
 }
+
+.slider .carousel-caption h3 {
+    font-size: 18px;
+}
+
+.slider .carousel-caption h2 {
+    font-size: 42px;
+}
+
+.slider .carousel-caption a {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #7952b3;
+    color: #ffffff;
+    padding: 12px 25px;
+    text-transform: uppercase;
+    font-size: 12px;
+    border-radius: 6px;
+}
+
+@media (max-width: 991px) {
+    .carousel-item img {
+        height: 600px !important;
+        width: auto !important;
+    }
+
+    .slider .carousel-caption h3 {
+        font-size: 16px;
+    }
+
+    .slider .carousel-caption h2 {
+        font-size: 23px;
+    }
+}
