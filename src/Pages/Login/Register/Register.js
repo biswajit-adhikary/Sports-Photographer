@@ -1,15 +1,30 @@
 import React from 'react';
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { Link, useNavigate } from 'react-router-dom';
+import auth from '../../../firebase.init';
 import SocialLogin from '../SocialLogin/SocialLogin';
 
 const Register = () => {
+    const [
+        createUserWithEmailAndPassword,
+        user,
+        loading,
+        error,
+    ] = useCreateUserWithEmailAndPassword(auth);
+
+    const navigate = useNavigate();
+
+    if (user) {
+        navigate('/');
+    }
+
     const handleRegister = (event) => {
         event.preventDefault();
         const name = event.target.name.value;
         const email = event.target.email.value;
         const password = event.target.password.value;
-        console.log(name, email, password);
+        createUserWithEmailAndPassword(email, password);
     }
     return (
         <div className='form-area'>

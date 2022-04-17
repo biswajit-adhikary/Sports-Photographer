@@ -1,10 +1,31 @@
 import React from 'react';
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { Link, useNavigate } from 'react-router-dom';
+import auth from '../../../firebase.init';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import './Login.css';
 
 const Login = () => {
+    const navigate = useNavigate();
+
+    const [
+        signInWithEmailAndPassword,
+        user,
+        loading,
+        error,
+    ] = useSignInWithEmailAndPassword(auth);
+
+    if (user) {
+        navigate('/');
+    }
+
+    const handleLogin = event => {
+        event.preventDefault();
+        const email = event.target.email.value;
+        const password = event.target.password.value;
+        signInWithEmailAndPassword(email, password);
+    }
     return (
         <div className='form-area'>
             <Container>
@@ -14,9 +35,9 @@ const Login = () => {
                 </div>
                 <Row>
                     <Col lg={{ span: 6, offset: 3 }}>
-                        <Form>
-                            <Form.Control type="email" placeholder="Email Address" />
-                            <Form.Control type="password" placeholder="Password" />
+                        <Form onSubmit={handleLogin}>
+                            <Form.Control name="email" type="email" placeholder="Email Address" />
+                            <Form.Control name="password" type="password" placeholder="Password" />
                             <p><Link to="/forgotpassword">Forgot Password?</Link></p>
                             <Button className='btn btn-theme' type="submit">
                                 Login
