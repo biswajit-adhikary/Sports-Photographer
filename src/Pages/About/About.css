@@ -1,0 +1,15 @@
+.about-area {
+    padding: 60px 0;
+}
+
+.about-image img {
+    width: 100%;
+}
+
+.about-text {
+    padding: 25px;
+}
+
+.about-text h3 {
+    font-size: 18px;
+}

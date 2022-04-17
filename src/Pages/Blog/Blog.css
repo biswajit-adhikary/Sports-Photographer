@@ -1,0 +1,16 @@
+.blog-area {
+    padding-top: 60px;
+    padding-bottom: 30px;
+}
+
+.single-blog {
+    border: 1px solid #ededed;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 30px;
+}
+
+.single-blog h3 {
+    font-size: 19px;
+    margin-bottom: 15px;
+}

@@ -1,10 +1,15 @@
 import React from 'react';
 import { Col } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import './Service.css';
 
 
 const Service = ({ service }) => {
-    const { name, img, description } = service;
+    const { id, name, img, description } = service;
+    const navigate = useNavigate();
+    const navigateToServiceDetail = id => {
+        navigate(`/service/${id}`);
+    }
     return (
         <Col lg={4}>
             <div className="single-service">
@@ -12,7 +17,7 @@ const Service = ({ service }) => {
                 <div className="service-text">
                     <h3>{name}</h3>
                     <p>{description}</p>
-                    <button className='btn btn-theme'>Book Now</button>
+                    <button onClick={() => navigateToServiceDetail(id)} className='btn btn-theme'>Book Now</button>
                 </div>
             </div>
         </Col>
