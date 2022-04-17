@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from '../../../images/logo.png';
 import { Container, Nav, Navbar } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import './Header.css';
 
 const Header = () => {
@@ -15,11 +15,21 @@ const Header = () => {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="ms-auto">
-                            <Nav.Link as={Link} to="/">Home</Nav.Link>
-                            <Nav.Link as={Link} to="/about">About</Nav.Link>
-                            <Nav.Link as={Link} to="/blog">Blog</Nav.Link>
-                            <Nav.Link as={Link} to="/login">Login</Nav.Link>
-                            <Nav.Link as={Link} to="/register">Register</Nav.Link>
+                            <NavLink
+                                className={({ isActive }) => isActive ? "nav-link active-link" : "nav-link"} to="/">Home
+                            </NavLink>
+                            <NavLink
+                                className={({ isActive }) => isActive ? "nav-link active-link" : "nav-link"} to="/about">About
+                            </NavLink>
+                            <NavLink
+                                className={({ isActive }) => isActive ? "nav-link active-link" : "nav-link"} to="/blog">Blog
+                            </NavLink>
+                            <NavLink
+                                className={({ isActive }) => isActive ? "nav-link active-link" : "nav-link"} to="/login">Login
+                            </NavLink>
+                            <NavLink
+                                className={({ isActive }) => isActive ? "nav-link active-link" : "nav-link"} to="/register">Register
+                            </NavLink>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

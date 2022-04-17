@@ -4,11 +4,31 @@ a.navbar-brand {
 }
 
 .navbar-nav a.nav-link {
-    padding: 0 20px !important;
+    padding: 5px 0 !important;
+    margin: 0 15px;
+}
+
+.navbar-nav a.active-link {
+    color: #ffffff !important;
+    position: relative;
+}
+
+.navbar-nav a.active-link::after {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 100%;
+    background: #fff;
+    left: 0;
+    bottom: 0;
 }
 
 @media (max-width: 991px) {
     .navbar-nav a.nav-link {
-        padding: 5px 0px !important;
+        margin: 5px 0px !important;
+    }
+
+    .navbar-nav a.active-link::after {
+        display: none;
     }
 }
