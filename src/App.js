@@ -11,6 +11,7 @@ import Header from './Pages/Shared/Header/Header';
 import NotFound from './Pages/Shared/NotFound/NotFound';
 import Checkout from './Pages/Checkout/Checkout';
 import ForgotPassword from './Pages/Login/ForgotPassword/ForgotPassword';
+import RequireAuth from './Pages/Login/RequireAuth/RequireAuth';
 
 function App() {
   return (
@@ -18,7 +19,12 @@ function App() {
       <Header></Header>
       <Routes>
         <Route path="/" element={<Home></Home>} />
-        <Route path='/service/:serviceId' element={<Checkout></Checkout>}></Route>
+        <Route path="/home" element={<Home></Home>} />
+        <Route path='/service/:serviceId' element={
+          <RequireAuth>
+            <Checkout></Checkout>
+          </RequireAuth>
+        }></Route>
         <Route path="/about" element={<About></About>} />
         <Route path="/blog" element={<Blog></Blog>} />
         <Route path="/login" element={<Login></Login>} />

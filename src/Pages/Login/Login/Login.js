@@ -1,8 +1,7 @@
 import React from 'react';
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import google from '../../../images/google.png';
-import github from '../../../images/git.png';
+import SocialLogin from '../SocialLogin/SocialLogin';
 import './Login.css';
 
 const Login = () => {
@@ -22,20 +21,14 @@ const Login = () => {
                             <Button className='btn btn-theme' type="submit">
                                 Login
                             </Button>
+                            <p className='mt-3'>New to Spotographer? <Link to="/register">Please Create New Account.</Link></p>
                         </Form>
                         <div className="extra">
                             <div></div>
                             <span>Or</span>
                             <div></div>
                         </div>
-                        <div className="login-buttons">
-                            <Button className='btn btn-theme' type="submit">
-                                <img src={google} alt="" /> Continue With Google
-                            </Button>
-                            <Button className='btn btn-theme' type="submit">
-                                <img src={github} alt="" /> Continue With Github
-                            </Button>
-                        </div>
+                        <SocialLogin></SocialLogin>
                     </Col>
                 </Row>
             </Container>
