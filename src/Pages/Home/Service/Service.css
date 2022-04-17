@@ -1,0 +1,17 @@
+.single-service {
+    border: 1px solid #ededed;
+    border-radius: 0 0 6px 6px;
+    margin-bottom: 30px;
+}
+
+.single-service img {
+    width: 100%;
+}
+
+.service-text {
+    padding: 15px;
+}
+
+.service-text h3 {
+    font-size: 22px;
+}

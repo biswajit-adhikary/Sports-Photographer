@@ -1,0 +1,8 @@
+.single-gallery {
+    margin-bottom: 30px;
+    border: 1px solid #ededed;
+}
+
+.single-gallery img {
+    width: 100%;
+}

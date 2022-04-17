@@ -3,3 +3,14 @@
         font-size: 15px;
     }
 }
+
+.btn-theme {
+    background-color: #7952b3;
+    border: 1px solid #7952b3;
+    color: #fff;
+}
+
+.btn-theme:hover {
+    background-color: transparent;
+    color: #7952b3;
+}

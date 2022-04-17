@@ -14,11 +14,18 @@
     display: inline-block;
     text-decoration: none;
     background-color: #7952b3;
+    border: 1px solid #7952b3;
     color: #ffffff;
     padding: 12px 25px;
     text-transform: uppercase;
     font-size: 12px;
     border-radius: 6px;
+    transition: .3s;
+}
+
+.slider .carousel-caption a:hover {
+    border: 1px solid #fff;
+    background-color: transparent;
 }
 
 @media (max-width: 991px) {
