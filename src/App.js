@@ -10,6 +10,7 @@ import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header';
 import NotFound from './Pages/Shared/NotFound/NotFound';
 import Checkout from './Pages/Checkout/Checkout';
+import ForgotPassword from './Pages/Login/ForgotPassword/ForgotPassword';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/blog" element={<Blog></Blog>} />
         <Route path="/login" element={<Login></Login>} />
         <Route path="/register" element={<Register></Register>} />
+        <Route path="/forgotpassword" element={<ForgotPassword></ForgotPassword>} />
         <Route path="*" element={<NotFound></NotFound>} />
       </Routes>
       <Footer></Footer>

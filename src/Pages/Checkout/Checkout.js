@@ -15,7 +15,7 @@ const Checkout = () => {
                         <h3>Book My Service: {serviceId}</h3>
                     </div>
                     <Row>
-                        <Col lg={{ span: 8, offset: 2 }}>
+                        <Col lg={{ span: 6, offset: 3 }}>
                             <Form>
                                 <Form.Control type="text" placeholder="Full Name" />
                                 <Form.Control type="email" placeholder="Email Address" />

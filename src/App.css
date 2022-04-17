@@ -8,9 +8,19 @@
     background-color: #7952b3;
     border: 1px solid #7952b3;
     color: #fff;
+    min-width: 150px;
 }
 
 .btn-theme:hover {
     background-color: transparent;
     color: #7952b3;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-heading h3 {
+    font-size: 32px;
 }
