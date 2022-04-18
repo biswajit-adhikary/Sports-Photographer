@@ -5,9 +5,11 @@ import google from '../../../images/google.png';
 import github from '../../../images/git.png';
 import { useSignInWithGoogle, useSignInWithGithub } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const SocialLogin = () => {
+    const location = useLocation();
+    let from = location.state?.from?.pathname || "/";
     const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
     const [signInWithGithub, gitUser, gitLoading, gitError] = useSignInWithGithub(auth);
     const navigate = useNavigate();
@@ -22,7 +24,7 @@ const SocialLogin = () => {
     }
 
     if (googleUser || gitUser) {
-        navigate('/');
+        navigate(from, { replace: true });
     }
 
     return (
