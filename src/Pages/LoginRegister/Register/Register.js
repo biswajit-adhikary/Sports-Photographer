@@ -7,6 +7,7 @@ import Loading from '../../Shared/Loading/Loading';
 import SocialLogin from '../SocialLogin/SocialLogin';
 
 const Register = () => {
+    let errorMessage;
     const [
         createUserWithEmailAndPassword,
         user,
@@ -16,9 +17,16 @@ const Register = () => {
     const [updateProfile, updating, updatingError] = useUpdateProfile(auth);
 
     const navigate = useNavigate();
+    if (user) {
+        navigate('/home');
+    }
 
     if (loading || updating) {
-        return <Loading></Loading>
+        return <Loading></Loading>;
+    }
+
+    if (error || updatingError) {
+        errorMessage = <p className='text-danger'>Error: {error?.message}</p>;
     }
 
     const handleRegister = async (event) => {
@@ -28,7 +36,6 @@ const Register = () => {
         const password = event.target.password.value;
         await createUserWithEmailAndPassword(email, password);
         await updateProfile({ displayName: name });
-        navigate('/home');
     }
     return (
         <div className='form-area'>
@@ -48,6 +55,7 @@ const Register = () => {
                             </Button>
                             <p className='mt-3'>Already have an account? <Link to="/login">Login Here.</Link></p>
                         </Form>
+                        {errorMessage}
                         <div className="extra">
                             <div></div>
                             <span>Or</span>
