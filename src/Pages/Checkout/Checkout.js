@@ -10,9 +10,11 @@ const Checkout = () => {
     const { serviceId } = useParams();
     const bookService = event => {
         event.preventDefault();
-        const service = event.target.event.value;
-        const details = event.target.details.value;
-        if (service && details) {
+        const name = event.target.name.value;
+        const email = event.target.email.value;
+        const address = event.target.address.value;
+        const phone = event.target.phone.value;
+        if (name && email && address && phone) {
             toast('Thank you for booking!');
         }
         else {
@@ -32,10 +34,12 @@ const Checkout = () => {
                     <Row>
                         <Col lg={{ span: 6, offset: 3 }}>
                             <Form onSubmit={bookService}>
-                                <Form.Control name="event" type="text" placeholder="Event Name" />
-                                <Form.Control name="details" as="textarea" placeholder="Details Message" />
+                                <Form.Control name="name" type="text" placeholder="Name" required />
+                                <Form.Control name="email" type="text" placeholder="Email Address" required />
+                                <Form.Control name="address" as="textarea" placeholder="Address" required />
+                                <Form.Control name="phone" type="tel" placeholder="Phone Number" required />
                                 <Button className='btn btn-theme' type="submit">
-                                    Book Now
+                                    Conform Booking
                                 </Button>
                             </Form>
                         </Col>
