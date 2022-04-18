@@ -1,8 +1,8 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
-import slider1 from '../../../images/slider/slider-one.jpg';
-import slider2 from '../../../images/slider/slider-two.jpg';
-import slider3 from '../../../images/slider/slider-three.jpg';
+import slider1 from '../../../images/slider/slider-1.jpg';
+import slider2 from '../../../images/slider/slider-2.jpg';
+import slider3 from '../../../images/slider/slider-3.jpg';
 import { Link } from 'react-router-dom';
 import './Banner.css';
 
