@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
+import Loading from '../../Shared/Loading/Loading';
 import google from '../../../images/google.png';
 import github from '../../../images/git.png';
 import { useSignInWithGoogle, useSignInWithGithub } from 'react-firebase-hooks/auth';
@@ -11,12 +12,19 @@ const SocialLogin = () => {
     const [signInWithGithub, gitUser, gitLoading, gitError] = useSignInWithGithub(auth);
     const navigate = useNavigate();
     let errorMessage;
+
+    if (googleLoading || gitLoading) {
+        return <Loading></Loading>;
+    }
+
     if (googleError || gitError) {
         errorMessage = <p className='text-danger'>Error: {googleError?.message} {gitError?.message}</p>
     }
+
     if (googleUser || gitUser) {
         navigate('/');
     }
+
     return (
         <div className="login-buttons">
             <Button onClick={() => signInWithGoogle()} className='btn btn-theme' type="submit">

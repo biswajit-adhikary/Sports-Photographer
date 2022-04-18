@@ -1,8 +1,9 @@
 import React from 'react';
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
+import Loading from '../../Shared/Loading/Loading';
 import SocialLogin from '../SocialLogin/SocialLogin';
 
 const Register = () => {
@@ -11,20 +12,23 @@ const Register = () => {
         user,
         loading,
         error,
-    ] = useCreateUserWithEmailAndPassword(auth);
+    ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+    const [updateProfile, updating, updatingError] = useUpdateProfile(auth);
 
     const navigate = useNavigate();
 
-    if (user) {
-        navigate('/');
+    if (loading || updating) {
+        return <Loading></Loading>
     }
 
-    const handleRegister = (event) => {
+    const handleRegister = async (event) => {
         event.preventDefault();
         const name = event.target.name.value;
         const email = event.target.email.value;
         const password = event.target.password.value;
-        createUserWithEmailAndPassword(email, password);
+        await createUserWithEmailAndPassword(email, password);
+        await updateProfile({ displayName: name });
+        navigate('/home');
     }
     return (
         <div className='form-area'>
@@ -37,8 +41,8 @@ const Register = () => {
                     <Col lg={{ span: 6, offset: 3 }}>
                         <Form onSubmit={handleRegister}>
                             <Form.Control name="name" type="text" placeholder="Full Name" />
-                            <Form.Control name="email" type="email" placeholder="Email Address" />
-                            <Form.Control name="password" type="password" placeholder="Password" />
+                            <Form.Control name="email" type="email" placeholder="Email Address" required />
+                            <Form.Control name="password" type="password" placeholder="Password" required />
                             <Button className='btn btn-theme' type="submit">
                                 Register
                             </Button>

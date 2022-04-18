@@ -4,16 +4,16 @@
     }
 }
 
-.btn-theme {
+.btn.btn-theme {
     background-color: #7952b3;
     border: 1px solid #7952b3;
     color: #fff;
-    min-width: 150px;
+    min-width: 120px;
 }
 
-.btn-theme:hover {
-    background-color: transparent;
-    color: #7952b3;
+.btn.btn-theme:hover {
+    background-color: transparent !important;
+    color: #7952b3 !important;
 }
 
 .section-heading {
