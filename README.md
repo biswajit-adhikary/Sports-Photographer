@@ -1,3 +1,28 @@
+## Website Name: Spotographer
+### Live Website Link: [Spotographer](https://sports-photographer-5c512.web.app/)
+
+Features and Functionality:
+---------------------------
+* This is my Sports Photographer website.
+* People can book Sports Photography service from here.
+* For booking they need to do authentication.
+* People can authentication using email & password, Google or Github.
+* They will get one verification email.
+* They can reset password.
+
+Technologies I use:
+-------------------
+* React
+* Firebase
+* React Router
+* React Firebase Hooks
+* React Bootstrap
+* React Toasts
+
+
+
+--------------------
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
