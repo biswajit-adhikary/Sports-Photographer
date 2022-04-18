@@ -4,25 +4,16 @@ import { useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Loading from '../../Shared/Loading/Loading';
 
 const ForgotPassword = () => {
-    const [sendPasswordResetEmail, sending, error] = useSendPasswordResetEmail(auth);
-    let errorMessage;
-
-    if (sending) {
-        return <Loading></Loading>
-    }
-
-    if (error) {
-        errorMessage = <p className='text-danger'>Error: {error?.message}</p>
-    }
+    const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
 
     const resetPassword = async event => {
         event.preventDefault();
         const email = event.target.email.value;
         if (email) {
             await sendPasswordResetEmail(email);
+            toast('Email Send!');
         }
         else {
             toast('Please enter email address!');
@@ -45,7 +36,6 @@ const ForgotPassword = () => {
                                 Submit
                             </Button>
                         </Form>
-                        {errorMessage}
                     </Col>
                 </Row>
             </Container>
