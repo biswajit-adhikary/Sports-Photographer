@@ -39,7 +39,7 @@ const Checkout = () => {
                                 <Form.Control name="address" as="textarea" placeholder="Address" required />
                                 <Form.Control name="phone" type="tel" placeholder="Phone Number" required />
                                 <Button className='btn btn-theme' type="submit">
-                                    Conform Booking
+                                    Proceed Checkout
                                 </Button>
                             </Form>
                         </Col>
